@@ -1,0 +1,30 @@
+{
+  "name": "node-js-rabbitmq",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "consumer": "nodemon -L  src/consumer.ts",
+    "publisher": "node --watch  src/publisher.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MarioGalvan/Node-js-RabbitMQ.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MarioGalvan/Node-js-RabbitMQ/issues"
+  },
+  "homepage": "https://github.com/MarioGalvan/Node-js-RabbitMQ#readme",
+  "devDependencies": {
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.2"
+  },
+  "dependencies": {
+    "@types/node": "^18.15.3",
+    "amqplib": "^0.10.3",
+    "colors": "^1.4.0",
+    "nodemon": "^2.0.21"
+  }
+}
