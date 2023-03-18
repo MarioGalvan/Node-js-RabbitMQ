@@ -13,7 +13,8 @@ async function mainConsumer() {
   channel.consume(
     RabbitConfigConsumer.QUEUE_NAME,
     (msg:any) => {
-      console.log(colors2.yellow(" ::: Mensaje Recibido :::"), msg.content.toString());
+      let finalMessage = msg?.content==typeof "string" ? msg?.content : JSON.parse(msg?.content);
+      console.log(colors2.yellow(" ::: Mensaje Recibido :::"),finalMessage);
     },
     {
       noAck: RabbitConfigConsumer.noAck,
